@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Lottery.css";
 import { generateRandomNumber, sum } from "./helper";
 import Ticket from "./Ticket";
+import Button from "./Button";
 
 
 export default function LotteryGame({n = 3, winCondition}){
@@ -18,7 +19,7 @@ export default function LotteryGame({n = 3, winCondition}){
             <h1>Lottery Game!</h1>
            <Ticket ticket={ticket}/>
            
-            <button onClick={buyTicket}>Generate Ticket</button>
+           <Button action={buyTicket}/>
             <h3>{isWinning && "Congratulations, you won!"}</h3>
         </div>
     )
