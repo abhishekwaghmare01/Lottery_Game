@@ -4,10 +4,10 @@ import { generateRandomNumber, sum } from "./helper";
 import Ticket from "./Ticket";
 
 
-export default function LotteryGame({n = 3, winningSum = 15}){
+export default function LotteryGame({n = 3, winCondition}){
     let [ticket, setTicket] = useState(generateRandomNumber(n));
 
-    let isWinning = sum(ticket) === winningSum;
+    let isWinning = winCondition(ticket);
 
     let buyTicket = () =>{
         setTicket(generateRandomNumber(n));
