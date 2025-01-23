@@ -1,13 +1,14 @@
 import './App.css'
 import LotteryGame from './LotteryGame'
-import TicketNum from './TicketNum';
+import Ticket from './Ticket';
 
 function App() {
 
 
   return (
     <>
-     <TicketNum num={5}/>
+     <LotteryGame n={3} winningSum={15}/>
+     
     </>
   )
 }
